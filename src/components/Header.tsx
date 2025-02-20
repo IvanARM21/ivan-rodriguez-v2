@@ -54,9 +54,9 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="max-w-screen-xl w-full fixed left-1/2 -translate-x-1/2 top-4 flex justify-center h-14 z-50">
+    <header className="max-w-screen-xl w-screen fixed left-1/2 -translate-x-1/2 top-4 flex justify-center h-14 z-50">
       <motion.div
-        initial={{ opacity: 0, scale: 0.75 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3 }}

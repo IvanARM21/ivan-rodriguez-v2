@@ -3,7 +3,7 @@ import { ProjectGrid } from "../components/ProjectGrid";
 
 export const Projects = () => {
   return (
-    <section className="" id="projects">
+    <section className="py-20" id="projects">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="mb-10">
           <motion.h2

@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 export const Footer = () => {
   return (
-    <footer className="py-20 mt-40 border-t border-zinc-200">
+    <footer className="py-20 mt-10 border-t border-zinc-200">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex justify-between md:flex-row flex-col-reverse gap-12">
+        <div className="flex flex-col-reverse md:flex-row justify-between gap-12">
           <motion.p
             viewport={{ once: true }}
             initial={{ opacity: 0, y: -20 }}

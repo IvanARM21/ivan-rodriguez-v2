@@ -6,8 +6,8 @@ import { LinkedinIcon } from "../icons/Linkedin";
 export const About = () => {
   return (
     <section className="h-screen flex justify-center items-center" id="about">
-      <div className="container px-4">
-        <div className="max-w-4xl relative w-full mx-auto">
+      <div className="container w-full px-4">
+        <div className="max-w-4xl relative mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 1.25 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}

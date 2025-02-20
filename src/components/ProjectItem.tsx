@@ -21,6 +21,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
           src={project.image}
           alt={`Image project ${project.title}`}
           className="rounded-2xl object-cover shadow-md"
+          loading="lazy"
         />
       </div>
       <div className=" flex flex-col w-full lg:w-1/2">
