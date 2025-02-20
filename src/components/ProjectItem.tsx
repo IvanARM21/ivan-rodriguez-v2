@@ -12,7 +12,7 @@ interface Props {
 export const ProjectItem = ({ project, projectIndex }: Props) => {
   return (
     <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-zinc-200 last-of-type:border-0 last-of-type:pb-0">
-      <div className="overflow-hidden w-full lg:w-1/2 rounded-2xl  h-full">
+      <div className="overflow-hidden w-full lg:w-1/2 rounded-2xl  min-h-80">
         <motion.img
           initial={{ opacity: 0, x: projectIndex % 2 === 0 ? -20 : 20 }}
           whileInView={{ opacity: 1, x: 0 }}
