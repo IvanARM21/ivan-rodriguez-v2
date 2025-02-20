@@ -1,0 +1,65 @@
+---
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+
+import "@fontsource-variable/karla";
+import "@fontsource/kalam";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body class="bg-zinc-50 text-zinc-600">
+    <Header client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer client:visible />
+  </body>
+
+  <style is:global>
+    body {
+      margin: 0;
+    }
+
+    .header-animation {
+      animation: fadeToZinc linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+
+    @keyframes fadeToZinc {
+      to {
+        backdrop-filter: blur(4px);
+        background-color: rgb(39, 39, 42);
+      }
+    }
+
+    .link {
+      color: #71717b;
+      animation: zincToWhite linear both;
+      animation-timeline: scroll();
+      animation-range: 0 1px;
+    }
+    .link.active {
+      color: #fff;
+    }
+    @keyframes zincToWhite {
+      to {
+        color: #e4e4e7;
+      }
+    }
+
+    body {
+      font-family: "Karla Variable", sans-serif;
+    }
+    .font-title {
+      font-family: "kalam", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</html>
