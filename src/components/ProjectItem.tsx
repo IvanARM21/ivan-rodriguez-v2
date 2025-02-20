@@ -3,6 +3,7 @@ import { GithubIcon } from "../icons/Github";
 import { PreviewIcon } from "../icons/PreviewIcon";
 import { motion } from "motion/react";
 import type { Project } from "../interfaces/project.interface";
+import { useEffect, useState } from "react";
 
 interface Props {
   project: Project;
@@ -10,20 +11,44 @@ interface Props {
 }
 
 export const ProjectItem = ({ project, projectIndex }: Props) => {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : null
+  );
+
+  useEffect(() => {
+    const onResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", onResize);
+    }
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
+
+  if (!windowWidth) return null;
+
   return (
     <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-zinc-200 last-of-type:border-0 last-of-type:pb-0">
-      <div className="overflow-hidden w-full lg:w-1/2 rounded-2xl  min-h-80">
-        <motion.img
-          initial={{ opacity: 0, x: projectIndex % 2 === 0 ? -20 : 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
-          viewport={{ once: true }}
-          src={project.image}
-          alt={`Image project ${project.title}`}
-          className="rounded-2xl object-cover shadow-md"
-          loading="lazy"
-        />
-      </div>
+      <motion.img
+        initial={{
+          opacity: 0,
+          x: windowWidth > 1024 ? (projectIndex % 2 === 0 ? -20 : 20) : 0,
+          y: windowWidth < 1024 ? -20 : 0,
+        }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+        viewport={{ once: true }}
+        src={project.image}
+        alt={`Image project ${project.title}`}
+        className="rounded-2xl object-cover shadow-md  w-full lg:w-1/2"
+        loading="lazy"
+        width={400}
+        height={400}
+      />
       <div className=" flex flex-col w-full lg:w-1/2">
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
