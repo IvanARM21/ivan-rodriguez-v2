@@ -13,7 +13,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-indigo-500 size-14 absolute right-0 top-80 sm:top-64"
+            className="text-indigo-500 size-8 sm:size-14 absolute right-0 top-80 sm:top-64"
           >
             <Lightning />
           </motion.div>
@@ -22,7 +22,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-indigo-500 size-14 absolute left-0 max-sm:top-80  sm:bottom-[400px]"
+            className="text-indigo-500 size-8 sm:size-14 absolute left-0 max-sm:top-80  sm:bottom-[400px]"
           >
             <Lightning />
           </motion.div>
