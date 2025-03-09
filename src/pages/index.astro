@@ -1,0 +1,11 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { About } from "../sections/About";
+import { Projects } from "../sections/Projects";
+---
+
+<MainLayout>
+  <About client:load />
+
+  <Projects client:visible />
+</MainLayout>

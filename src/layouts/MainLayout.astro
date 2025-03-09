@@ -1,0 +1,75 @@
+---
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+
+import '@fontsource-variable/quicksand';
+import '@fontsource/cardo';
+---
+
+<html lang="es">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iván Rodríguez | Portfolio</title>
+    <meta
+      name="description"
+      content="Freelance Frontend Developer with FullStack knowledge. I specialize in building modern web applications, e-commerce platforms and more."
+    />
+  </head>
+  <body class="bg-zinc-900 bg-indigo-800/20 text-zinc-600">
+    <Header client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer client:visible />
+  </body>
+
+  <style is:global>
+    body {
+      margin: 0;
+    }
+
+    .header-animation {
+      animation: fadeToZinc linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+
+    @keyframes fadeToZinc {
+      to {
+        backdrop-filter: blur(4px);
+        background-color: #372aac20;
+      }
+    }
+
+    /* .link {
+      color: #71717b;
+      animation: zincToWhite linear both;
+      animation-timeline: scroll();
+      animation-range: 0 1px;
+    }
+    .link.active {
+      color: #fff;
+    }
+    @keyframes zincToWhite {
+      to {
+        color: #e4e4e7;
+      }
+    } */
+
+    body {
+      font-family: "Quicksand Variable", sans-serif;
+      font-weight: 500;
+    }
+    .font-title {
+      font-family: "Cardo", sans-serif;
+
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</html>
