@@ -10,7 +10,7 @@ export const Footer = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="sm:text-lg text-zinc-300 font-medium"
+            className=" text-zinc-300 text-lg font-title font-bold"
           >
             &copy; {new Date().getFullYear()} Iván Rodríguez.
           </motion.p>
@@ -44,7 +44,7 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <h3 className="text-zinc-300 text-2xl mb-6 font-title">
+              <h3 className="text-zinc-300 text-2xl mb-6 font-bold font-title">
                 Contact
               </h3>
               <ul className="flex flex-col gap-4">

@@ -32,7 +32,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
   if (!windowWidth) return null;
 
   return (
-    <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-zinc-200 last-of-type:border-0 last-of-type:pb-0">
+    <li className="flex flex-col lg:flex-row lg:even:flex-row-reverse gap-5 md:gap-10 pb-15 border-b border-zinc-800 last-of-type:border-0 last-of-type:pb-0">
       <motion.img
         initial={{
           opacity: 0,

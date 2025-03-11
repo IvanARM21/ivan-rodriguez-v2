@@ -6,11 +6,11 @@ import { motion } from "motion/react";
 export const About = () => {
   return (
     <section
-      className="min-h-[calc(100vh-96px)] mt-24 flex justify-center items-center"
+      className="min-h-[calc(100vh-96px)] pt-24 flex justify-center items-center"
       id="about"
     >
       <div className="container w-full px-4">
-        <div className="max-w-4xl relative mx-auto">
+        <div className="max-w-5xl relative mx-auto">
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 1.25 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -29,7 +29,7 @@ export const About = () => {
           >
             <Lightning />
           </motion.div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl text-center font-bold font-title text-zinc-300 mx-auto">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl text-center font-bold font-title text-zinc-300 mx-auto">
             <motion.span
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-xl text-zinc-400 max-w-2xl font-medium mx-auto text-center"
+            className="text-xl md:text-2xl text-zinc-400 max-w-2xl font-medium mx-auto text-center"
           >
             I'm passionate about crafting amazing user experience, accesibles,
             and beautifuls
