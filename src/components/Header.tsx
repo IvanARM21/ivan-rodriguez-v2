@@ -21,10 +21,7 @@ export const Header = () => {
     updateIndicator(activeLink);
   }, [activeLink]);
 
-  const handleClick = (linkId: string) => {
-    setActiveLink(linkId);
-    updateIndicator(linkId);
-  };
+  const handleClick = (linkId: string) => setActiveLink(linkId);
 
   useEffect(() => {
     const updateLink = () => {
