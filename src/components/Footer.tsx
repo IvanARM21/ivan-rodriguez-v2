@@ -22,7 +22,7 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <h3 className="text-zinc-300 text-2xl mb-6 font-bold font-title">
+              <h3 className="text-zinc-300 text-2xl mb-5 font-bold font-title">
                 Elsewhere
               </h3>
               <ul className="flex flex-col gap-4 text-indigo-700">
@@ -44,7 +44,7 @@ export const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              <h3 className="text-zinc-300 text-2xl mb-6 font-bold font-title">
+              <h3 className="text-zinc-300 text-2xl mb-5 font-bold font-title">
                 Contact
               </h3>
               <ul className="flex flex-col gap-4">

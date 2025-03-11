@@ -3,7 +3,7 @@ import { GithubIcon } from "../icons/Github";
 import { PreviewIcon } from "../icons/PreviewIcon";
 import { motion } from "motion/react";
 import type { Project } from "../interfaces/project.interface";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Props {
   project: Project;
@@ -92,7 +92,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
 
         <div className="flex gap-4 mt-6">
           {project.codeLink ? (
-            <>
+            <React.Fragment>
               <motion.a
                 viewport={{ once: true }}
                 initial={{ opacity: 0, scale: 0.75 }}
@@ -117,7 +117,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
                 <PreviewIcon className="size-4" />
                 Preview
               </motion.a>
-            </>
+            </React.Fragment>
           ) : (
             <motion.a
               viewport={{ once: true }}
