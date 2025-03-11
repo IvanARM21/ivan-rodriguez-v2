@@ -27,12 +27,22 @@ export const Footer = () => {
               </h3>
               <ul className="flex flex-col gap-4 text-indigo-700">
                 <li>
-                  <a href="" className="text-zinc-400 font-medium">
+                  <a
+                    href="https://github.com/IvanARM21"
+                    className="text-zinc-400 font-medium"
+                    aria-label="My Github Account"
+                    target="_blank"
+                  >
                     Github
                   </a>
                 </li>
                 <li>
-                  <a href="" className="text-zinc-400 font-medium">
+                  <a
+                    href="https://www.linkedin.com/in/iv%C3%A1n-rodr%C3%ADguez-moreira-b9848628b/"
+                    className="text-zinc-400 font-medium"
+                    aria-label="My Linkedin Account"
+                    target="_blank"
+                  >
                     Linkedin
                   </a>
                 </li>

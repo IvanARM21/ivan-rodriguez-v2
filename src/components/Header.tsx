@@ -60,10 +60,10 @@ export const Header = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3 }}
-        className="flex justify-center items-center gap-2 relative backdrop-blur-2xl  w-fit rounded-full px-2  header-animation "
+        className="flex justify-center items-center gap-2 relative backdrop-blur-3xl  w-fit rounded-full px-2  header-animation "
       >
         <div
-          className="absolute bottom-2 h-10  bg-indigo-600/30 rounded-full transition-all duration-300 -z-10"
+          className="absolute bottom-2 h-10  bg-indigo-600/40 rounded-full transition-all duration-300 -z-10"
           style={{
             width: `${indicatorStyle.width}px`,
             left: `${indicatorStyle.left}px`,

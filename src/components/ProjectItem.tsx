@@ -1,9 +1,9 @@
+import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { GithubIcon } from "../icons/Github";
 import { PreviewIcon } from "../icons/PreviewIcon";
 import { motion } from "motion/react";
 import type { Project } from "../interfaces/project.interface";
-import React, { useEffect, useState } from "react";
 
 interface Props {
   project: Project;
@@ -59,7 +59,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
         >
           {project.title}
         </motion.h3>
-        <ul className="flex gap-4 mt-4 flex-wrap">
+        <ul className="flex gap-2 lg:gap-4 mt-4 flex-wrap">
           {project.technologies.map(
             ({ name, icon: Icon, color }, technologyIndex) => (
               <motion.li
@@ -69,7 +69,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
                 viewport={{ once: true }}
                 key={`${project.title}-${name}`}
                 className={twMerge(
-                  "text-zinc-50 font-medium bg-purple-600/40 px-3 py-1.5 text-sm  rounded-full flex gap-1.5 items-center",
+                  "text-zinc-50 font-medium bg-purple-600/40 px-3 py-1.5 text-xs md:text-sm  rounded-full flex gap-1.5 items-center",
                   color
                 )}
               >
@@ -111,7 +111,7 @@ export const ProjectItem = ({ project, projectIndex }: Props) => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
                 target="_blank"
-                href="https://landing-coffee-three.vercel.app/"
+                href={project.previewLink}
                 className=" bg-indigo-950/60 hover:bg-indigo-950 text-indigo-600 transition-colors duration-300 text-sm px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer"
               >
                 <PreviewIcon className="size-4" />
