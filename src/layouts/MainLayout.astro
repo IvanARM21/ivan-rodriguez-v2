@@ -3,21 +3,26 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import "../styles/global.css";
 
-import "@fontsource-variable/karla";
-import "@fontsource/kalam";
+import "@fontsource-variable/quicksand";
+import "@fontsource/cardo";
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iván Rodríguez | Portfolio</title>
-    <meta
-      name="description"
-      content="Freelance Frontend Developer with FullStack knowledge. I specialize in building modern web applications, e-commerce platforms and more."
-    />
-  </head>
-  <body class="bg-zinc-50 text-zinc-600">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iván Rodríguez | Portfolio</title>
+  <meta
+    name="description"
+    content="Freelance Frontend Developer with FullStack knowledge. I specialize in building modern web applications, e-commerce platforms and more."
+  />
+
+  <body class="bg-zinc-900 text-zinc-600">
     <Header client:load />
     <main>
       <slot />
@@ -39,11 +44,11 @@ import "@fontsource/kalam";
     @keyframes fadeToZinc {
       to {
         backdrop-filter: blur(4px);
-        background-color: rgb(39, 39, 42);
+        background-color: #372aac20;
       }
     }
 
-    .link {
+    /* .link {
       color: #71717b;
       animation: zincToWhite linear both;
       animation-timeline: scroll();
@@ -56,13 +61,14 @@ import "@fontsource/kalam";
       to {
         color: #e4e4e7;
       }
-    }
+    } */
 
     body {
-      font-family: "Karla Variable", sans-serif;
+      font-family: "Quicksand Variable", sans-serif;
+      font-weight: 500;
     }
     .font-title {
-      font-family: "kalam", sans-serif;
+      font-family: "Cardo", sans-serif;
     }
     html {
       scroll-behavior: smooth;

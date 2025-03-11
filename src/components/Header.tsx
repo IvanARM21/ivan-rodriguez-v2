@@ -60,10 +60,10 @@ export const Header = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.3 }}
-        className="flex justify-center items-center gap-2 relative backdrop-blur-lg  w-fit rounded-full px-2  header-animation "
+        className="flex justify-center items-center gap-2 relative backdrop-blur-2xl  w-fit rounded-full px-2  header-animation "
       >
         <div
-          className="absolute bottom-2 h-10  bg-indigo-600 rounded-full transition-all duration-300 -z-10"
+          className="absolute bottom-2 h-10  bg-indigo-600/30 rounded-full transition-all duration-300 -z-10"
           style={{
             width: `${indicatorStyle.width}px`,
             left: `${indicatorStyle.left}px`,
@@ -76,7 +76,7 @@ export const Header = () => {
           }}
           href="#about"
           className={twMerge(
-            "text-zinc-500 font-semibold px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg  transition-colors duration-300 links-animation link",
+            "text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
             activeLink === "about" && "active"
           )}
           onClick={() => handleClick("about")}
@@ -89,7 +89,7 @@ export const Header = () => {
           }}
           href="#projects"
           className={twMerge(
-            "text-zinc-500 font-semibold px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg transition-colors duration-300 links-animation link",
+            "text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300 links-animation",
             activeLink === "projects" && "active"
           )}
           onClick={() => handleClick("projects")}
@@ -98,7 +98,7 @@ export const Header = () => {
         </a>
         <a
           href="mailto:ivanrms371@gmail.com"
-          className="text-zinc-500 font-semibold px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg link transition-colors duration-300"
+          className="text-zinc-200 font-semibold px-4 sm:px-6 py-2 text-sm md:text-base transition-colors duration-300"
         >
           Contact
         </a>

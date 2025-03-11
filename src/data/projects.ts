@@ -8,27 +8,27 @@ import { MercadoPagoIcon } from "../icons/MercadoPagoIcon";
 export const technologies : Technology[] = [
     {
         name: "Astro",
-        color: "bg-purple-600 text-zinc-50",
+        color: "bg-purple-600/30 text-zinc-50",
         icon: AstroIcon
     },
     {
         name: "TailwindCSS",
-        color: "bg-cyan-600 text-zinc-50",
+        color: "bg-cyan-600/30 text-zinc-50",
         icon: TailwindCSS
     },
     {
         name: "Next.js",
-        color: "bg-neutral-900 text-zinc-50",
+        color: "bg-neutral-950 text-zinc-50",
         icon: NextjsIcon
     },
     {
         name: "Prisma",
-        color: "bg-slate-600 text-zinc-50",
+        color: "bg-slate-600/30 text-zinc-50",
         icon: PrismaIcon
     },
     {
         name: "MercadoPago",
-        color: "bg-blue-700 text-zinc-50",
+        color: "bg-blue-700/30 text-zinc-50",
         icon: MercadoPagoIcon
     },
 ]
